@@ -118,7 +118,7 @@ class Grid: # enviroment
 
 #       end of class        #
 
-def standard_grid():
+def standard_grid(start_pos=(2, 0)):
     # define a grid that describes the reward for arriving at each state
     # and possible actions at each state
     # the grid looks like this
@@ -129,7 +129,7 @@ def standard_grid():
     #   .    x    .    1
     #   s    .    .    .
     # as an example but thats not the standard grid lol
-    g = Grid(3, 4, (2, 0))
+    g = Grid(3, 4, start_pos)
     rewards = {(0,3): 1, (1,3): -1}
     actions = {
         (0,0): ('D', 'R'),

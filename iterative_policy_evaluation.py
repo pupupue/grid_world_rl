@@ -5,25 +5,30 @@ from grid_world import standard_grid
 SMALL_ENOUGH = 10e-4
 step_counter = 0 # for debug
 def print_values(V, g):
+    print("-------------------------------------")
     for i in range(g.width):
-        print("-------------------------------------")
         for j in range(g.height):
             #get value from coordinate or 0
             v = V.get((i,j), 0)
             if v >= 0:
-                print (" %.2f|" % v, end=" ")
+                print ("| %.2f" % v, end=" ")
             else:
-                print ("%.2f|" % v, end=" ")
+                print ("|%.2f" % v, end=" ")
+        print(end="|")
         print("")
+        print("-------------------------------------")
+    
 
 def print_policy(P, g):
+    print("-------------------------------------")
     for i in range(g.width):
-        print("-------------------------------------")
         for j in range(g.height):
             #get value from coordinate or 0
             a = P.get((i,j), ' ')
-            print (" %s |" % a, end=" ")
+            print ("| %s " % a, end=" ")
+        print(end="|")
         print("")
+        print("-------------------------------------")
 
 if __name__ == '__main__':
     # iterative policy eval
