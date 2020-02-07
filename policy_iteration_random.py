@@ -36,7 +36,7 @@ if __name__ == '__main__':
         else:
         # terminal state
             V[s] = 0
-
+    print("V inside: ", V)
     # repeat until convergence - will break out when policy does not change
     while True:
 
